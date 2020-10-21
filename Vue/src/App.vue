@@ -5,15 +5,18 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view/> -->
-    <Base />
+    <!-- <Base /> -->
+    <Components />
   </div>
 </template>
 
 <script>
-import Base from './components/BaseUse/Base'
+// import Base from './components/BaseUse/Base'
+import Components from './components/ComponentsVue/Components'
 export default {
   components: {
-    Base
+    // Base
+    Components
   }
 }
 </script>>
