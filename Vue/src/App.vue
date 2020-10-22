@@ -6,17 +6,20 @@
     </div>
     <router-view/> -->
     <!-- <Base /> -->
-    <Components />
+    <!-- <Components /> -->
+    <Advanced />
   </div>
 </template>
 
 <script>
 // import Base from './components/BaseUse/Base'
-import Components from './components/ComponentsVue/Components'
+// import Components from './components/ComponentsVue/Components'
+import Advanced from './components/AdvancedUse/index'
 export default {
   components: {
     // Base
-    Components
+    // Components,
+    Advanced
   }
 }
 </script>>
