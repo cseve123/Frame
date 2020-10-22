@@ -16,6 +16,9 @@ export default {
     addTitle () {
       // 调用父组件的事件
       this.$emit('add', this.title)
+
+      // 自定义组件通讯
+      this.$bus.$emit('addSome', this.title)
       this.title = ''
     }
   },

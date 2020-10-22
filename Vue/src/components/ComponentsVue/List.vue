@@ -22,6 +22,9 @@ export default {
   methods: {
     deleteItem (id) {
       this.$emit('delete', id)
+    },
+    addTitle (title) {
+      console.log('evnet on>>>>>>>>>', title)
     }
   },
   created () {
@@ -29,6 +32,8 @@ export default {
   },
   mounted () {
     console.log('list mounted')
+    // 通过自定义通讯
+    this.$bus.$on('addSome', this.addTitle)
   },
   beforeUpdate () {
     console.log('list before update')
@@ -41,6 +46,8 @@ export default {
   },
   destroyed () {
     console.log('list destroyed')
+    // 自己定的事件自己销毁
+    this.$bus.$off('addSome', this.addTitle)
   }
 }
 </script>

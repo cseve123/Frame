@@ -1,6 +1,8 @@
 <template>
   <div>
-    <index />
+    <!-- 测试组件的生命周期 父先before 然后再子before ed  父再ed -->
+    <button @click="isShow = !isShow">删除大组件</button>
+    <index v-if="isShow" />
   </div>
 </template>
 
@@ -9,6 +11,11 @@ import index from './index'
 export default {
   components: {
     index
+  },
+  data () {
+    return {
+      isShow: true
+    }
   }
 }
 </script>
