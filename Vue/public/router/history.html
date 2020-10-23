@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>路由-history方式</title>
+</head>
+<body>
+    <button id="btn">修改 url</button>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOMContentLoaded', location.pathname)
+        })
+
+        document.getElementById('btn').addEventListener('click', () => {
+            const state = {name: 'page1'}
+            console.log('切换路由到', 'page1')
+            history.pushState(state, '', 'page1')
+        })
+        window.onpopstate = (event) => {
+            console.log('onpopstate', envent.state, location.pathname)
+        }
+
+    </script>
+</body>
+</html>
