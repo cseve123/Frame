@@ -46,7 +46,7 @@ class EventUse extends Component {
         return <ul>
             {this.state.list.map((item, index) => {
                 // 可以通过this.clickHandler4.bind(this, xxx)
-                // 也可以通过()=> this.clickHandler4   这个不用每次bind，感觉会好一些
+                // 也可以通过()=> this.clickHandler4   这个不用每次bind，感觉会好一些   
                 return <li key={item.id} onClick={() => this.clickHandler4(item.id, item.title)}>
                     index {index}; title {item.title}
                 </li>
