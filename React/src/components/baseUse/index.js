@@ -1,5 +1,8 @@
 import React from 'react';
-import JsxUse from './JsxUse'
+// import JsxUse from './JsxUse'
+// import ConditionUse from './ConditionUse'
+// import ListUse from "./ListUse";
+import EventUse from './EventUse'
 
 class BaseUse extends React.Component {
     // constructor (props) {
@@ -7,7 +10,10 @@ class BaseUse extends React.Component {
     // }
     render () {
         return <div>
-            <JsxUse />
+            {/* <JsxUse /> */}
+            {/* <ConditionUse /> */}
+            {/* <ListUse /> */}
+            <EventUse />
         </div>
     }
 }
