@@ -3,7 +3,9 @@ import React from 'react';
 // import ConditionUse from './ConditionUse'
 // import ListUse from "./ListUse";
 // import EventUse from './EventUse'
-import FormUse from './FormUse'
+// import FormUse from './FormUse'
+// import PropsUse from './PropsUse'
+import StateUse from './StateUse'
 
 class BaseUse extends React.Component {
     // constructor (props) {
@@ -15,7 +17,9 @@ class BaseUse extends React.Component {
             {/* <ConditionUse /> */}
             {/* <ListUse /> */}
             {/* <EventUse /> */}
-            <FormUse />
+            {/* <FormUse /> */}
+            {/* <PropsUse /> */}
+            <StateUse />
         </div>
     }
 }
