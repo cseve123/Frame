@@ -12,6 +12,7 @@ class UncontrolledUse extends Component {
     }
         render () {
         return <div>
+            {/* ref */}
             <input defaultValue={this.state.name} ref={this.nameInputRef} />
         </div>
     }
