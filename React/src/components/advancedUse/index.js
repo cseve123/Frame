@@ -1,10 +1,12 @@
 import { Component } from 'react';
-import UncontrolledUse from './UncontrolledUse'
+// import UncontrolledUse from './UncontrolledUse'
+import PortalUse from './PortalUse'
 
 class AdvancedUse extends Component {
     render () {
         return <div>
-            <UncontrolledUse />            
+            {/* <UncontrolledUse /> */}
+            <PortalUse />
         </div>
     }
 }
