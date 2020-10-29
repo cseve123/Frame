@@ -1,11 +1,11 @@
-// import BaseUse from './components/baseUse/index'
-import AdvancedUse from './components/advancedUse/index'
+import BaseUse from './components/baseUse/index'
+// import AdvancedUse from './components/advancedUse/index'
 
 function App() {
   return (
     <div className="App">
-      {/* <BaseUse /> */}
-      <AdvancedUse />
+      <BaseUse />
+      {/* <AdvancedUse /> */}
     </div>
   );
 }

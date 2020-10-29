@@ -4,8 +4,8 @@ import React from 'react';
 // import ListUse from "./ListUse";
 // import EventUse from './EventUse'
 // import FormUse from './FormUse'
-// import PropsUse from './PropsUse'
-import StateUse from './StateUse'
+import PropsUse from './PropsUse'
+// import StateUse from './StateUse'
 
 class BaseUse extends React.Component {
     // constructor (props) {
@@ -18,8 +18,8 @@ class BaseUse extends React.Component {
             {/* <ListUse /> */}
             {/* <EventUse /> */}
             {/* <FormUse /> */}
-            {/* <PropsUse /> */}
-            <StateUse />
+            <PropsUse />
+            {/* <StateUse /> */}
         </div>
     }
 }

@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';  // 类型检查
 
 class Input extends Component {
@@ -35,7 +35,8 @@ Input.propTypes = {
     subTitle: PropTypes.func.isRequired
 }
 
-class List extends Component {
+// PureComponent 隐式shouldComponentUpdate
+class List extends React.PureComponent {
     // constructor(props){
     //     super(props)
     // }
@@ -57,6 +58,28 @@ List.propTypes = {
     list: PropTypes.arrayOf(PropTypes.object).isRequired
 }
 
+class Footer extends Component {
+    constructor(props) {
+        super(props)
+        this.state={}
+    }
+    render() {
+        return <p>
+            {this.props.text}
+        </p>
+    }
+    componentDidUpdate() {
+        console.log('Footer component update')
+    }
+    // 因为父组件更新，子组件必然更新，但footer组件实则没有变化不需要更新
+    shouldComponentUpdate(nextProps, nextState)  {
+        if (nextProps.text !== this.props.text)  {
+            return true // 只有当值变化时才更新
+        }
+        return false // 不重复渲染
+    }
+}
+
 class TodoList extends Component {
     constructor(props) {
         super(props)
@@ -74,7 +97,8 @@ class TodoList extends Component {
                     id: 'id-3',
                     title: '标题3'
                 }
-            ]
+            ],
+            footerInfo: '底部'
         }
     }
     render() {
@@ -83,6 +107,9 @@ class TodoList extends Component {
             <Input subTitle={this.InputSubTitle} />
             {/* props接收数据 */}
             <List list={this.state.list} />
+            {/* Footer组件不需要更新 */}
+            {/* 但React父组件更新，子组件无条件更新 */}
+            <Footer text={this.state.footerInfo} />
         </div>
     }
     InputSubTitle = (title) => {
