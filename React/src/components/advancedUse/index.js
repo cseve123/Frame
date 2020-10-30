@@ -2,7 +2,9 @@ import { Component } from 'react';
 // import UncontrolledUse from './UncontrolledUse'
 // import PortalUse from './PortalUse'
 // import ContextUse from './ContextUse'
-import LazyUse from './LazyUse'
+// import LazyUse from './LazyUse'
+// import HOCUse from './HOCUse'
+import RenderPorps from './RenderProps'
 
 class AdvancedUse extends Component {
     render () {
@@ -10,7 +12,9 @@ class AdvancedUse extends Component {
             {/* <UncontrolledUse /> */}
             {/* <PortalUse /> */}
             {/* <ContextUse /> */}
-            <LazyUse />
+            {/* <LazyUse /> */}
+            {/* <HOCUse /> */}
+            <RenderPorps />
         </div>
     }
 }
