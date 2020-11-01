@@ -4,7 +4,7 @@ import React from 'react';
 // import ListUse from "./ListUse";
 // import EventUse from './EventUse'
 // import FormUse from './FormUse'
-import PropsUse from './PropsUse'
+// import PropsUse from './PropsUse'
 // import StateUse from './StateUse'
 
 class BaseUse extends React.Component {
