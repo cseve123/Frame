@@ -18,7 +18,7 @@ class BaseUse extends React.Component {
             {/* <ListUse /> */}
             {/* <EventUse /> */}
             {/* <FormUse /> */}
-            <PropsUse />
+            {/* <PropsUse /> */}
             {/* <StateUse /> */}
         </div>
     }
