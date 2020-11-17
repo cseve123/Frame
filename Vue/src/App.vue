@@ -7,19 +7,22 @@
     <router-view/> -->
     <!-- <Base /> -->
     <!-- <Components /> -->
-    <Advanced />
+    <!-- <Advanced /> -->
+    <Todo-list />
   </div>
 </template>
 
 <script>
 // import Base from './components/BaseUse/Base'
 // import Components from './components/ComponentsVue/Components'
-import Advanced from './components/AdvancedUse/index'
+// import Advanced from './components/AdvancedUse/index'
+import TodoList from './components/TodoList/index'
 export default {
   components: {
     // Base
     // Components,
-    Advanced
+    // Advanced,
+    TodoList
   }
 }
 </script>>
