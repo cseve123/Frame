@@ -8,7 +8,7 @@
     <!-- <Base /> -->
     <!-- <Components /> -->
     <!-- <Advanced /> -->
-    <Todo-list />
+    <Car />
   </div>
 </template>
 
@@ -16,16 +16,16 @@
 // import Base from './components/BaseUse/Base'
 // import Components from './components/ComponentsVue/Components'
 // import Advanced from './components/AdvancedUse/index'
-import TodoList from './components/TodoList/index'
+import Car from './components/Car/index'
 export default {
   components: {
     // Base
     // Components,
     // Advanced,
-    TodoList
+    Car
   }
 }
-</script>>
+</script>
 
 <style>
 #app {
