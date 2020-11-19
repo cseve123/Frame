@@ -1,6 +1,6 @@
 <template>
   <div>
-    Car
+    Car no
   </div>
 </template>
 
