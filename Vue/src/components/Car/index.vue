@@ -1,6 +1,6 @@
 <template>
   <div>
-    Car no
+    Car no do something
   </div>
 </template>
 
