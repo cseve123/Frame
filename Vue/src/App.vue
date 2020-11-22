@@ -16,7 +16,7 @@
 // import Base from './components/BaseUse/Base'
 // import Components from './components/ComponentsVue/Components'
 // import Advanced from './components/AdvancedUse/index'
-import Car from './components/Car/index'
+import Car from './components/Cart/index'
 export default {
   components: {
     // Base
