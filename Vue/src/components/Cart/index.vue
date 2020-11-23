@@ -2,15 +2,20 @@
   <div>
     <ProductionList :list="productionList" />
     <hr />
+    <CartList
+      :productionList="productionList"
+      :cartList="cartList"/>
   </div>
 </template>
 
 <script>
 import event from './event'
 import ProductionList from './ProductionList/index'
+import CartList from './CartList/index'
 export default {
   components: {
-    ProductionList
+    ProductionList,
+    CartList
   },
   data () {
     return {
@@ -30,16 +35,36 @@ export default {
           title: '商品AC',
           price: 20
         }
-      ]
+      ],
+      cartList: []
     }
   },
   methods: {
     addToCart (id) {
-      console.log(id)
+      const prd = this.cartList.find(item => item.id === id)
+      if (prd) {
+        prd.quantity++
+        return
+      }
+      this.cartList.push({
+        id,
+        quantity: 1
+      })
+    },
+    delFromCart (id) {
+      const prd = this.cartList.find(item => item.id === id)
+      if (prd == null) {
+        return
+      }
+      prd.quantity--
+      if (prd.quantity <= 0) {
+        this.cartList = this.cartList.filter(item => item.id !== id)
+      }
     }
   },
   mounted () {
     event.$on('addToCart', this.addToCart)
+    event.$on('delFromCart', this.delFromCart)
   }
 }
 </script>
