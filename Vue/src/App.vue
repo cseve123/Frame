@@ -23,6 +23,26 @@ export default {
     // Components,
     // Advanced,
     Car
+  },
+  provide () {
+    return {
+      app: this
+    }
+  },
+  data () {
+    return {
+      userInfo: null
+    }
+  },
+  mounted () {
+    this.getUserInfo()
+  },
+  methods: {
+    getUserInfo () {
+      this.userInfo = {
+        name: '德玛西亚'
+      }
+    }
   }
 }
 </script>
